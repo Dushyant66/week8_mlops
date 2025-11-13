@@ -11,7 +11,7 @@ This experiment demonstrates how even small data corruption can alter model perf
 
 ### 1️ Clone Repo
 ```bash
-git clone https://github.com/<your-username>/iris_poisoning_project.git
+git clone https://github.com/<Dushyant66>/week8_mlops.git
 cd iris_poisoning_project
 ```
 
