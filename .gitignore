@@ -5,8 +5,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 
-# Ignore MLflow experiment runs
-mlruns/
 
 # Ignore data and large generated files
 data/
@@ -17,6 +15,7 @@ outputs/*
 # But keep markdown and text reports
 !outputs/*.md
 !outputs/*.txt
+!outputs/*.png
 
 # Ignore remaining system/IDE files
 .DS_Store
