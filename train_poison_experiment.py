@@ -40,13 +40,14 @@ def poison_data(X, level=0.05, random_state=None):
     idx = rng.choice(X.index, n_samples, replace=False)
     noise = rng.normal(0, 0.5, size=(n_samples, X.shape[1]))
     X_poisoned.loc[idx] += noise
-    # Clip values to original min/max to avoid unrealistic features
-    X_poisoned = X_poisoned.clip(X.min(), X.max())
+    # Clip values column-wise to original min/max to avoid unrealistic features
+    X_poisoned = X_poisoned.clip(lower=X.min(), upper=X.max(), axis=1)
     return X_poisoned
 
+
 # === MLFlow EXPERIMENT SETUP ===
-# mlflow.set_tracking_uri("http://127.0.0.1:8100")
-mlflow.set_experiment("IRIS Data Poisoning Experiment")
+mlflow.set_tracking_uri("http://127.0.0.1:8100")
+mlflow.set_experiment("IRIS Data Poisoning Experimentssssss")
 client = MlflowClient(mlflow.get_tracking_uri())
 
 results = []
