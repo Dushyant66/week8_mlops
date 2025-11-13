@@ -1,7 +1,25 @@
+# Ignore virtual environments and cache
 venv/
 __pycache__/
-mlruns/
 *.pyc
 .ipynb_checkpoints/
 .env
+
+# Ignore MLflow experiment runs
+mlruns/
+
+# Ignore data and large generated files
 data/
+
+# Ignore all output files by default
+outputs/*
+
+# But keep markdown and text reports
+!outputs/*.md
+!outputs/*.txt
+
+# Ignore remaining system/IDE files
+.DS_Store
+.idea/
+.vscode/
+*.log
